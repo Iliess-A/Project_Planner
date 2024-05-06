@@ -17,7 +17,9 @@
             .cards{
                 height: 25vh;
                 width: 100%;
-                background-color: red;  
+                background-image: url(../images/background-image/); 
+                background-repeat: no-repeat;
+                background-size: contain;
                 height: auto;
                 border : {
                     style : solid;
