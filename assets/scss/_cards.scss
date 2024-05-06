@@ -17,9 +17,9 @@
             .cards{
                 height: 25vh;
                 width: 100%;
-                background-image: url(../images/background-image/); 
+                background-image: url(../images/background-image/pexels-rickyrecap-1964471.jpg); 
                 background-repeat: no-repeat;
-                background-size: contain;
+                background-size: cover;
                 height: auto;
                 border : {
                     style : solid;
@@ -27,7 +27,7 @@
                     color: black;
                 }
                 .project{
-                    background-color: rgb(255, 255, 255);
+                    background-color: rgb(255, 255, 255, .7);
                     display: flex;
                     align-items: center;
                     justify-content: space-around;
