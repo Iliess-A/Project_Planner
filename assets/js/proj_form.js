@@ -2,18 +2,23 @@ import {task_form} from "./task_form.js";
 task_form();
 export function proj_form(){
 
-    const buttonn_proj =document.getElementById('add_projects');
+    const buttonn_header = document.querySelector('.button_header');
     const proj_form=document.getElementById('proj_form');
 
     proj_form.style.display='none';
 
-    buttonn_proj.addEventListener('click',event=>{
+    buttonn_header.addEventListener('click',event=>{
 
-        const form_display =proj_form.style.display;
-        if(form_display === 'content'){
-            form_display ='none'
+       
+
+        if(proj_form.style.display === 'none'){
+
+            proj_form.style.display ='flex';
+
         }else{
-            form_display ='content'
+
+            proj_form.style.display ='none';
+
         }
 
         //cree le tableau d'objet.

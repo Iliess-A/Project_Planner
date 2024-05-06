@@ -23,7 +23,7 @@
             <p>dark mode</p>
         </div>
         <div>
-            <input type="button" value="Add a project" class="button_header">
+            <input type="button" value="Add a project" class="button_header" id="add_projects">
         </div>
     </header>
 
@@ -33,27 +33,27 @@
         les deux div aurons la même class, pour simplifier l'affichage -> .cards
     -->
 
-        <!-- <div id="projects" class="cards">
+         <!-- <div id="projects" class="cards">
 
             <div id ='project index' ><a href=""></a></div>
 
-        </div> -->
+        </div>  -->
 
 
         <!-- ================================== ne pas display les deux en même temps ================================== -->
 
-         <!-- <div id="tasks" class="cards">
+           <div id="tasks" class="cards">
             
             <div id ='task ' ><a href=""></a></div>
 
-        </div>  -->
+        </div>  
 
         <!-- ================================== diplay des formulaire. ================================== -->
         
         <!-- formulaire pour les projects id: proj_form EVENT LISTENER ON CLICK -->
-        <form id="proj_form">
+        <form id="proj_form" >
             <input type="text" id="titre_proj">
-            <label for="titre_proj"></label>
+            <label for="titre_proj">proj</label>
             <input type="text" id="description_projet">
             <label for="description_projet"></label>
             <input type="date" id="date_proj">
@@ -68,7 +68,7 @@
         <!-- formulaire pour les tasks id: task_form EVENT LISTENER ON CLICK -->
         <form id="task_form">
             <input type="text"  id="titre_task">
-            <label for="titre_task"></label>
+            <label for="titre_task">task</label>
             <input type="date" id="date_task">
             <label for="date_task"></label>
             <select name="status" id="status_task">

@@ -2,21 +2,30 @@
 
 export function task_form(){
 
-    const buttonn_task = document.getElementById('add_task')
+    const buttonn_header = document.querySelector('.button_header');
     const task_form=document.getElementById('task_form');
 
-    task_form.style.display='none';
 
-    buttonn_task.addEventListener('click',event=>{
+    if(buttonn_header.id!=='add_task'){
 
-        const form_display = task_form.style.display;
-        if(form_display === 'content'){
-            form_display ='none'
-        }else{
-            form_display ='content'
-        }
+        task_form.style.display='none';
 
-        //cree le tableau des task.
+    }else{
 
-    });
+        buttonn_header.addEventListener('click',event=>{
+
+            if(task_form.style.display === 'none'){
+
+                task_form.style.display ='flex';
+
+            }else{
+
+                task_form.style.display ='none';
+
+            }
+    
+            //cree le tableau des task.
+    
+        });
+    }
 }
