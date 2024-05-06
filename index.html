@@ -52,8 +52,8 @@
         <!-- ================================== diplay des formulaire. ================================== -->
         
         <!-- formulaire pour les projects id: proj_form EVENT LISTENER ON CLICK -->
-        <form id="proj_form" >
-
+        <div id="proj_form" >
+            <button id="quit">x</button>
             <label for="titre_proj">votre titre:</label>
             <input type="text" id="titre_proj">
 
@@ -72,9 +72,10 @@
 
             <button type="submit" id="submit_proj">submit</button>
             
-        </form>
+        </div>
         <!-- formulaire pour les tasks id: task_form EVENT LISTENER ON CLICK -->
-        <form id="task_form">
+        <div id="task_form">
+            <button id="quit">x</button>
 
             <label for="titre_task">task</label>
             <input type="text"  id="titre_task">
@@ -93,8 +94,8 @@
             </select>
 
             <button type="submit" id="submit_task">submit</button>
-            
-        </form>
+
+        </div>
     </main>
 
     <footer>

@@ -123,3 +123,20 @@ header input:hover {
   background-color: rgb(170, 147, 119);
   color: wheat;
 }
+
+div#proj_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: rgba(255, 192, 203, 0.87);
+  height: 70vh;
+  width: 60vw;
+  top: 15vh;
+  left: 20vw;
+}
+div#task_form {
+  display: flex;
+  flex-direction: column;
+}/*# sourceMappingURL=style.css.map */

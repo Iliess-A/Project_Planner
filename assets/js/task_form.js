@@ -5,6 +5,7 @@ export function task_form(){
     const buttonn_header = document.querySelector('.button_header');
     const task_form=document.getElementById('task_form');
     const submit_button = document.getElementById('submit_task');
+    const quit_button = document.getElementById('quit');
 
     if(buttonn_header.id!=='add_task'){
 
@@ -26,12 +27,17 @@ export function task_form(){
     
         });
     }
+
+    //petite croix pour quitter le formulaire.
+    quit_button.addEventListener('click',event=>{
+        task_form.style.display='none';
+    });
     
     //creation du tableau qui vas contenir les differente task
-    // submit_task
+    //remplis le tableau avec les donnee du formulaire
     const task=[];
     submit_button.addEventListener('click',event=>{
-        
+
         const titre = document.getElementById('titre_task');
         const date = document.getElementById('date_task');
         const description = document.getElementById('description_task');
