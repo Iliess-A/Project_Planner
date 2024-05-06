@@ -21,7 +21,14 @@ export function proj_form(){
 
         }
 
-        //cree le tableau d'objet.
+        tab=[{
+             titre:'',
+             description:'',
+             date:'',
+             task:[]
+            }];
+            
+        
 
     });
 

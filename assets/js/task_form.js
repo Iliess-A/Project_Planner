@@ -24,7 +24,12 @@ export function task_form(){
 
             }
     
-            //cree le tableau des task.
+            task=[{
+                titre:'',
+                date:'',
+                description:'',
+                status:''
+            }];
     
         });
     }
