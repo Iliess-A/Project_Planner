@@ -53,31 +53,47 @@
         
         <!-- formulaire pour les projects id: proj_form EVENT LISTENER ON CLICK -->
         <form id="proj_form" >
+
+            <label for="titre_proj">votre titre:</label>
             <input type="text" id="titre_proj">
-            <label for="titre_proj">proj</label>
+
+            <label for="description_projet">description du projets:</label>
             <input type="text" id="description_projet">
-            <label for="description_projet"></label>
+
+            <label for="date_proj">Date de remise:</label>
             <input type="date" id="date_proj">
-            <label for="date_proj"></label>
+
             <select name="status" id="status_projet">
-                <option value="default">selectionner...</option>
+                <option value="default">status</option>
                 <option value="en_cours">en cours</option>
                 <option value="fini">fini</option>
                 <option value="pas_commencer">pas commencer</option>
             </select>
+
+            <button type="submit" id="submit_proj">submit</button>
+            
         </form>
         <!-- formulaire pour les tasks id: task_form EVENT LISTENER ON CLICK -->
         <form id="task_form">
-            <input type="text"  id="titre_task">
+
             <label for="titre_task">task</label>
-            <input type="date" id="date_task">
+            <input type="text"  id="titre_task">
+
             <label for="date_task"></label>
+            <input type="date" id="date_task">
+
+            <label for="description_task"></label>
+            <input type="text" id="description_task">
+
             <select name="status" id="status_task">
                 <option value="default">selectionner...</option>
                 <option value="en_cours">en cours</option>
                 <option value="fini">fini</option>
                 <option value="pas_commencer">pas commencer</option>
             </select>
+
+            <button type="submit" id="submit_task">submit</button>
+            
         </form>
     </main>
 
