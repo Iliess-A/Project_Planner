@@ -1,5 +1,5 @@
 import {task_form} from "./task_form.js";
-
+task_form();
 export function proj_form(){
 
     const buttonn_proj =document.getElementById('add_projects');
@@ -8,7 +8,7 @@ export function proj_form(){
     proj_form.style.display='none';
 
     buttonn_proj.addEventListener('click',event=>{
-        
+
         const form_display =proj_form.style.display;
         if(form_display === 'content'){
             form_display ='none'
