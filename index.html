@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="/assets/js/script.js"></script>
-git     <title>Project Mannager</title>
+    <script defer src="/assets/js/script.js" type="module"></script>
+    <title>Project Mannager</title>
 </head>
 <body>
 
@@ -42,9 +42,33 @@ git     <title>Project Mannager</title>
         <!-- ================================== diplay des formulaire. ================================== -->
         
         <!-- formulaire pour les projects id: proj_form EVENT LISTENER ON CLICK -->
-
+        <form id="proj_form">
+            <input type="text" id="titre_proj">
+            <label for="titre_proj"></label>
+            <input type="text" id="description_projet">
+            <label for="description_projet"></label>
+            <input type="date" id="date_proj">
+            <label for="date_proj"></label>
+            <select name="status" id="status_projet">
+                <option value="default">selectionner...</option>
+                <option value="en_cours">en cours</option>
+                <option value="fini">fini</option>
+                <option value="pas_commencer">pas commencer</option>
+            </select>
+        </form>
         <!-- formulaire pour les tasks id: task_form EVENT LISTENER ON CLICK -->
-
+        <form id="task_form">
+            <input type="text"  id="titre_task">
+            <label for="titre_task"></label>
+            <input type="date" id="date_task">
+            <label for="date_task"></label>
+            <select name="status" id="status_task">
+                <option value="default">selectionner...</option>
+                <option value="en_cours">en cours</option>
+                <option value="fini">fini</option>
+                <option value="pas_commencer">pas commencer</option>
+            </select>
+        </form>
     </main>
 
     <footer>
