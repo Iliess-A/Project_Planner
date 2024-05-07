@@ -1,64 +1,14 @@
 
   // functions.js
+  import { proj_formulaire } from "./proj_form.js";
+  import { getTab } from "./proj_form.js";
+  let tab=[];
   
-    let tab = [
-      {
-        titre: "test",
-        description: "Je teste pour voir si tout fonctionne zebi",
-        date: "06/05/2024",
-        task: []
-      },
-      {
-        titre: "test2",
-        description: "Je teste pour voir si tout fonctionne zebi",
-        date: "07/05/2024",
-        task: []
-      },
-      {
-        titre: "test3",
-        description: "Je teste pour voir si tout fonctionne zebi",
-        date: "08/05/2024",
-        task: []
-      },
-      {
-        titre: "test4",
-        description: "Je teste pour voir si tout fonctionne zebi",
-        date: "09/05/2024",
-        task: []
-      },
-      {
-          titre: "test",
-          description: "Je teste pour voir si tout fonctionne zebi",
-          date: "06/05/2024",
-          task: []
-        },
-        {
-            titre: "test2",
-            description: "Je teste pour voir si tout fonctionne zebi",
-            date: "07/05/2024",
-            task: []
-          },
-          {
-              titre: "test3",
-              description: "Je teste pour voir si tout fonctionne zebi",
-              date: "08/05/2024",
-              task: []
-            },
-            {
-                titre: "test4",
-                description: "Je teste pour voir si tout fonctionne zebi",
-                date: "09/05/2024",
-                task: []
-              },
-            ];
-
   function createDiv(name) {
     let div = document.createElement("div");
     div.className = name; // Ajout de la classe à la div
     return div;
   }
-  
-  
   
   // code
   
@@ -80,36 +30,45 @@
     
     card();
     //création de la div container
-  
-    for (let i = 0; i < tab.length; i++) {
-      let divProject = createDiv("project");
-      let divNameContainer = createDiv("nameContainer");
-      // let aName = document.createElement('a'); 
-      let divDateContainer = createDiv("dateContainer");
-      let divNbOfDays = createDiv("nbOfDaysContainer");
-      let divStatus = createDiv("statusContainer")
-      divProject.setAttribute("id", "index"); // donne un attribu id avec une valeur index à divProject
+    if (tab.length<1){
 
-      let pName = document.createElement('p');
-      let Date = document.createElement('p');
-      let Day = document.createElement('p');
-      
+      const submit_button = document.getElementById('submit_proj');
 
+      submit_button.addEventListener('click',event=>{
 
-      Day.innerText = tab[i].date;
-      divNbOfDays.appendChild(Day);
-      Date.innerHTML= '06/05/2024'
-      divDateContainer.appendChild(Date);
-      pName.innerHTML = tab[i].titre;
-      divNameContainer.appendChild(pName);
-     //Ajoute toutes les div container à la div divProject 
-     divProject.appendChild(divNameContainer);
-     divProject.appendChild(divDateContainer);
-     divProject.appendChild(divNbOfDays);
-     divProject.appendChild(divStatus);
-     projects.appendChild(divProject); // Ajoute la div divProject à la Div project
+        tab = getTab();
+        console.log(tab);
+
+        for (let i = 0; i < tab.length; i++) {
+          let divProject = createDiv("project");
+          let divNameContainer = createDiv("nameContainer");
+          // let aName = document.createElement('a'); 
+          let divDateContainer = createDiv("dateContainer");
+          let divNbOfDays = createDiv("nbOfDaysContainer");
+          let divStatus = createDiv("statusContainer")
+          divProject.setAttribute("id", "index"); // donne un attribu id avec une valeur index à divProject
+    
+          let pName = document.createElement('p');
+          let Date = document.createElement('p');
+          let Day = document.createElement('p');
+          
+          Day.innerText = tab[i].date;
+          divNbOfDays.appendChild(Day);
+          Date.innerHTML= '06/05/2024'
+          divDateContainer.appendChild(Date);
+          pName.innerHTML = tab[i].titre;
+          divNameContainer.appendChild(pName);
+         //Ajoute toutes les div container à la div divProject 
+         divProject.appendChild(divNameContainer);
+         divProject.appendChild(divDateContainer);
+         divProject.appendChild(divNbOfDays);
+         divProject.appendChild(divStatus);
+         projects.appendChild(divProject); // Ajoute la div divProject à la Div project
+        }
+
+      })
+    }else{
+      console.log('ton tab est vide');
     }
+    
   }
-  
-  // card();
-  // AddProject();

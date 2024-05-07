@@ -1,6 +1,6 @@
 //formulaire task et creation du tableau des task
 
-export function task_form(){
+export function task_formulaire(){
 
     const buttonn_header = document.querySelector('.button_header');
     const task_form=document.getElementById('task_form');
