@@ -86,18 +86,20 @@
 
          
          // ajoute un évent sur la corbeille pour supprimer project 
-        //  let test = document.getElementById('redimBin')
-        //  console.log("mon image = "+test);
-
-        //  test.addEventListener('click', event =>{
-        //   let selec = document.getElementById('index'+[i]);
-        //   console.log("ma séléection est la suivante : "+selec.id);
-        //   if(selec){
-        //     selec.removeChild('index');
-        //   } else{
-        //     console.log('va te faire foutre connard tu ne sais pas coder ! ');
-        //   }
-        // });
+         let test = document.getElementById('redimBin');
+         console.log("mon image = " + test);
+         
+         test.addEventListener('click', event => {
+             let selec = document.getElementById('index' + i);
+             console.log("ma sélection est la suivante : " + selec.id);
+             if (selec) {
+                 // Supprimer l'élément sélectionné (selec)
+                 selec.remove();
+             } else {
+                 console.log('Va te faire foutre connard, tu ne sais pas coder !');
+             }
+         });
+         
 
         }
         console.log(submit_button);
