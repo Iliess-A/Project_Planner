@@ -1,5 +1,3 @@
-import {task_form} from "./task_form.js";
-task_form();
 export function proj_form(){
 
     const buttonn_header = document.querySelector('.button_header');
