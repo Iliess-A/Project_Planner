@@ -1,4 +1,6 @@
-export function proj_form(){
+import { task_formulaire } from "./task_form.js";
+task_formulaire();
+export function proj_formulaire(){
 
     const buttonn_header = document.querySelector('.button_header');
     const proj_form=document.getElementById('proj_form');
@@ -8,8 +10,6 @@ export function proj_form(){
     proj_form.style.display='none';
 
     buttonn_header.addEventListener('click',event=>{
-
-       
 
         if(proj_form.style.display === 'none'){
 
@@ -21,8 +21,6 @@ export function proj_form(){
 
         }
 
-
-
     });
 
     //petite croix pour quitter le formulaire.
@@ -32,14 +30,13 @@ export function proj_form(){
 
    
     //remplis le tableau avec les donnee du formulaire
-    const proj_tab=[];
     submit_button.addEventListener('click',event=>{
 
         const titre = document.getElementById('titre_proj');
         const date = document.getElementById('date_proj');
         const description = document.getElementById('description_projet');
         const status = document.getElementById('status_projet');
-        let table_task = task_form();
+        let table_task = task_formulaire();
         const item ={
             titre:titre.value,
             date:date.value,
@@ -48,13 +45,17 @@ export function proj_form(){
             task:table_task
         }
 
+        proj_tab.push(item);
+        //je remet a zero le formulaire.
         titre.value='';
         date.value='';
         description.value='';
         status.value='';
-
-        proj_tab.push(item);
-        // console.log(proj_tab);
-        return proj_tab;
+        //console.log(proj_tab);
     })
+}
+const proj_tab=[];
+
+export function getTab(){
+    return proj_tab;
 }
