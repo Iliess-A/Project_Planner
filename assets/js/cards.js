@@ -38,7 +38,7 @@
 
         tab = getTab();
         console.log(tab);
-
+        projects.innerHTML='';
         for (let i = 0; i < tab.length; i++) {
           let divProject = createDiv("project");
           let divNameContainer = createDiv("nameContainer");
