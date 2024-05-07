@@ -1,84 +1,79 @@
-
+//import
+let tab = [
+    {
+      titre: "test",
+      description: "Je teste pour voir si tout fonctionne zebi",
+      date: "06/05/2024",
+      task: []
+    },
+    {
+      titre: "test2",
+      description: "Je teste pour voir si tout fonctionne zebi",
+      date: "07/05/2024",
+      task: []
+    },
+    {
+      titre: "test3",
+      description: "Je teste pour voir si tout fonctionne zebi",
+      date: "08/05/2024",
+      task: []
+    },
+    {
+      titre: "test4",
+      description: "Je teste pour voir si tout fonctionne zebi",
+      date: "09/05/2024",
+      task: []
+    },
+    // {
+    //   titre: "test",
+    //   description: "Je teste pour voir si tout fonctionne zebi",
+    //   date: "06/05/2024",
+    //   task: []
+    // },
+    // {
+    //   titre: "test2",
+    //   description: "Je teste pour voir si tout fonctionne zebi",
+    //   date: "07/05/2024",
+    //   task: []
+    // },
+    // {
+    //   titre: "test3",
+    //   description: "Je teste pour voir si tout fonctionne zebi",
+    //   date: "08/05/2024",
+    //   task: []
+    // },
+    // {
+    //   titre: "test4",
+    //   description: "Je teste pour voir si tout fonctionne zebi",
+    //   date: "09/05/2024",
+    //   task: []
+    // },
+  ];
   // functions.js
-  
-    let tab = [
-      {
-        titre: "test",
-        description: "Je teste pour voir si tout fonctionne zebi",
-        date: "06/05/2024",
-        task: []
-      },
-      {
-        titre: "test2",
-        description: "Je teste pour voir si tout fonctionne zebi",
-        date: "07/05/2024",
-        task: []
-      },
-      {
-        titre: "test3",
-        description: "Je teste pour voir si tout fonctionne zebi",
-        date: "08/05/2024",
-        task: []
-      },
-      {
-        titre: "test4",
-        description: "Je teste pour voir si tout fonctionne zebi",
-        date: "09/05/2024",
-        task: []
-      },
-      {
-          titre: "test",
-          description: "Je teste pour voir si tout fonctionne zebi",
-          date: "06/05/2024",
-          task: []
-        },
-        {
-            titre: "test2",
-            description: "Je teste pour voir si tout fonctionne zebi",
-            date: "07/05/2024",
-            task: []
-          },
-          {
-              titre: "test3",
-              description: "Je teste pour voir si tout fonctionne zebi",
-              date: "08/05/2024",
-              task: []
-            },
-            {
-                titre: "test4",
-                description: "Je teste pour voir si tout fonctionne zebi",
-                date: "09/05/2024",
-                task: []
-              },
-            ];
-
-  function createDiv(name) {
+  function createDiv(className) {
     let div = document.createElement("div");
-    div.className = name; // Ajout de la classe à la div
+    div.className = className; // Ajout de la classe à la div
     return div;
   }
-  
-  
   
   // code
   
   let mainElement = document.querySelector("main"); // on sélectionne le main qui à été créé en html pur
   function card() {
     //Création de la div qui va contenir toutes les autres div
-     let projects = createDiv("cards"); //création de la div project avec sa class cards
+    let projects = createDiv("cards"); //création de la div project avec sa class cards
     projects.setAttribute("id", "projects"); //ajout de l'id projects à la div
-
     let task = createDiv("cards"); //création de la div task avec sa class cards
     task.setAttribute("id", "task"); //ajout de l'id task à la div 'task'
   
     mainElement.appendChild(projects); //On ajoute la div projects au main
     mainElement.appendChild(task); //On ajoute la div task au main
-
+  
+    return;
   }
   
-   export function AddProject() {
-    
-    card();
+  export function AddProject() {
+    tab;
     //création de la div container
   
     for (let i = 0; i < tab.length; i++) {
@@ -111,5 +106,6 @@
     }
   }
   
-  // card();
-  // AddProject();
+  card();
+  AddProject();
+  
