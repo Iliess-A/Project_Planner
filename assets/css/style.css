@@ -1,0 +1,10 @@
+@media screen and (max-width: 480px) {
+  body footer .footer-container {
+    display: flex;
+    height: auto;
+    background-color: red;
+  }
+  body footer .footer-container .redim-img {
+    width: 24%;
+  }
+}

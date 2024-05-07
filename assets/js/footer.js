@@ -5,28 +5,35 @@ export function footer() {
     let divIlies = document.createElement('div');
     let divJordan = document.createElement('div');
 
-    let aDzheylyan = document.createElement('a');
-    let aIlies = document.createElement('a');
-    let aJordan = document.createElement('a');
+    let imgDzheylyan = document.createElement('img');
+    let imgIlies = document.createElement('img');
+    let imgJordan = document.createElement('img');
 
 
 
     divDzheylyan.classList.add('divDzheylyan');
-
     divIlies.classList.add('divIlies');
     divJordan.classList.add('divJordan');
-    
 
-    divDzheylyan.appendChild(aDzheylyan);
+    imgDzheylyan.classList.add('redim-img')
+    imgIlies.classList.add('redim-img')
+    imgJordan.classList.add('redim-img')
+
+    imgDzheylyan.classList.add('redim-img')
+    imgDzheylyan.setAttribute('src','./assets/images/icon/github.png');
+    divDzheylyan.appendChild(imgDzheylyan);
     divFooterContainer.appendChild(divDzheylyan);
 
 
-    divIlies.appendChild(aIlies);
+    imgIlies.setAttribute('src','./assets/images/icon/github.png');
+    divIlies.appendChild(imgIlies);
     divFooterContainer.appendChild(divIlies);
 
 
-    divJordan.appendChild(aJordan);
+    imgJordan.setAttribute('src','./assets/images/icon/github.png');
+    divJordan.appendChild(imgJordan);
     divFooterContainer.appendChild(divJordan);
+
     divFooterContainer.classList.add('footer-container')
     footerElement.appendChild(divFooterContainer);// ajout de la divcontainer dans le footer
 
