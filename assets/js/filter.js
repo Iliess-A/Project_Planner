@@ -9,9 +9,36 @@ const value_filter = conteneur_filter.querySelector('.filter');
 
 function project_filter(){
     //code pour fltrer les projets
-    if(value_filter.value ==='default'){
-        console.log('not filtered');
-    }
+    conteneur_filter.addEventListener('change',event=>{
+
+        if(value_filter.value ==='default'){
+            console.log('not filtered');
+        }else{
+            switch(value_filter.value){
+                case 'en_cours':
+                    filterd_tab=tab.filter(objets =>objets.status === 'en_cours');
+                    console.log(filterd_tab);
+                    break;
+                case 'fini':
+                    console.log('fini');
+                    break;
+                case 'pas_commencer':
+                    console.log('pas commencer');
+                    break;
+                case 'date_croissante':
+                    console.log('date croissante');
+                    break;
+                case 'date_decroissante':
+                    console.log('date decroissante');
+                    break;
+                case 'alphabetique':
+                    console.log('de a -> z');
+                        
+            }
+        }
+
+    })
+    
 };
 
 function tasks_filter(){
