@@ -14,7 +14,7 @@
   }
   
   // code
-  
+
   let mainElement = document.querySelector("main"); // on sélectionne le main qui à été créé en html pur
   function card() {
     //Création de la div qui va contenir toutes les autres div
@@ -32,13 +32,13 @@
    export function AddProject() {
     card();
     //création de la div container
-    if (tab.length<1){
+    if (tab.length<=1){
 
       const submit_button = document.getElementById('submit_proj');
 
       submit_button.addEventListener('click',event=>{
         tab = getTab();
-        console.log(tab);
+        // console.log(tab);
 
         projects.innerHTML='';
         for (let i = 0; i < tab.length; i++) {
@@ -56,7 +56,7 @@
           let Day = document.createElement('p');
           let imgSupp = document.createElement('img');
           imgSupp.setAttribute('src','./assets/images/icon/icons-trash-48.png');
-          imgSupp.setAttribute('id','redimBin');
+          imgSupp.setAttribute('id',`index ${i}`);
 
 
           divNbOfDays.appendChild(Day);
@@ -77,35 +77,46 @@
          // Date 
          dateToDay = tab[i].date;
          Day.innerText = ''+ remaningTime(dateToDay) + 'day';
+         let index = tab[i];
+         
+         console.log(tab[i]);
+
+         let TESTZEBI = document.getElementById('projects');
+         console.log(TESTZEBI);
+        //  // ====================== Debut du supp ==========================
 
 
-         let TakeDiv = document.getElementById('index'+[i]); // selectionne chaque nouvelle div qui est généré 
-         let ArraySafe = [];
-         ArraySafe.push(TakeDiv);
-         console.log(ArraySafe); // sauvegarde l'élément div dans un tab 
+         imgSupp.addEventListener('click',event =>{
 
-         
-         // ajoute un évent sur la corbeille pour supprimer project 
-         let test = document.getElementById('redimBin');
-         console.log("mon image = " + test);
-         
-         test.addEventListener('click', event => {
-             let selec = document.getElementById('index' + i);
-             console.log("ma sélection est la suivante : " + selec.id);
-             if (selec) {
-                 // Supprimer l'élément sélectionné (selec)
-                 selec.remove();
-             } else {
-                 console.log('Va te faire foutre connard, tu ne sais pas coder !');
-             }
-         });
-         
+          let childElement = document.getElementById("index"+[i]);
+          console.log(childElement);
+          // let childElement = event.target.TESTZEBI;
+          TESTZEBI.removeChild(childElement);
+          console.log(tab);
+          // console.log("ENFAAAAAAAAAAAAANT" + childElement);
+          // console.log("TEEEEEEEEEEEEEEEEEST marche ?");
+          tab.splice(index,1);
+          console.log(tab);
+          // console.log(tab);
+          // AddProject();
+          
+        })
+        console.log(getTab());
+        //  let selec = document.getElementById('index'+i);
+        //  console.log("TEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEST = "+tab);
 
         }
         console.log(submit_button);
+        
       })
       
     }else{
+      const submit_button = document.getElementById('submit_proj');
+      submit_button.addEventListener('click', events =>{
+        AddProject();
+        console.log("teeeeeeeeeeeeeeeeeeeest")
+      });
+
       console.log('ton tab est vide');
     }
  
