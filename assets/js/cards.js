@@ -81,7 +81,7 @@
          
          console.log(tab[i]);
 
-         let TESTZEBI = document.getElementById('projects');
+         let DivParentsProject = document.getElementById('projects');
          console.log(TESTZEBI);
         //  // ====================== Debut du supp ==========================
 
@@ -90,20 +90,13 @@
 
           let childElement = document.getElementById("index"+[i]);
           console.log(childElement);
-          // let childElement = event.target.TESTZEBI;
-          TESTZEBI.removeChild(childElement);
+          DivParentsProject.removeChild(childElement);
           console.log(tab);
-          // console.log("ENFAAAAAAAAAAAAANT" + childElement);
-          // console.log("TEEEEEEEEEEEEEEEEEST marche ?");
           tab.splice(index,1);
-          console.log(tab);
           // console.log(tab);
-          // AddProject();
+
           
         })
-        console.log(getTab());
-        //  let selec = document.getElementById('index'+i);
-        //  console.log("TEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEST = "+tab);
 
         }
         console.log(submit_button);
