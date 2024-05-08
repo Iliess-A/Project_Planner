@@ -2,9 +2,7 @@ import{buttonHeader} from './header.js';
 buttonHeader();
 import {proj_formulaire} from "./proj_form.js";
  proj_formulaire();
- import { getTab } from './proj_form.js';
- import { AddProject } from './cards.js';
- AddProject(getTab());
+
  import {darkMode} from "./dark_mode.js";
  darkMode();
 import { filtre } from './filter.js';

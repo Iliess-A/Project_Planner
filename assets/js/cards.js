@@ -5,7 +5,7 @@
   import { remaningTime } from "./remaningTime.js";
 
   let dateToDay; // variable qui va récupérer la date du input Date 
-  let tab=[]; // tableau qui récupère les données du formulaire pro_forms.js
+  // let tab=[]; // tableau qui récupère les données du formulaire pro_forms.js
   
   function createDiv(name) {
     let div = document.createElement("div");
@@ -14,7 +14,9 @@
   }
   
   // code
-
+  const main = document.querySelector('header');
+  const conteneur_filter = main.querySelector('.filter_conteneur');
+  const value_filter = conteneur_filter.querySelector('.filter');
   let mainElement = document.querySelector("main"); // on sélectionne le main qui à été créé en html pur
   function card() {
     //Création de la div qui va contenir toutes les autres div
@@ -32,16 +34,15 @@
    export function AddProject(tableau) {
     card();
     //création de la div container
-    if (tab.length<=1){
-
+    if (tableau){
+      projects.innerHTML='';
       const submit_button = document.getElementById('submit_proj');
 
       submit_button.addEventListener('click',event=>{
-        tab = tableau;
-        // console.log(tab);
+        
         
         projects.innerHTML='';
-        for (let i = 0; i < tab.length; i++) {
+        for (let i = 0; i < tableau.length; i++) {
           let divProject = createDiv("project");
           let divNameContainer = createDiv("nameContainer");
           let supp = createDiv("suppElement");
@@ -60,9 +61,9 @@
 
 
           divNbOfDays.appendChild(Day);
-          Date.innerHTML= tab[i].date;
+          Date.innerHTML= tableau[i].date;
           divDateContainer.appendChild(Date);
-          pName.innerHTML = tab[i].titre;
+          pName.innerHTML = tableau[i].titre;
           divNameContainer.appendChild(pName);
          //Ajoute toutes les div container à la div divProject 
          divProject.appendChild(divNameContainer);
@@ -75,11 +76,11 @@
 
 
          // Date 
-         dateToDay = tab[i].date;
+         dateToDay = tableau[i].date;
          Day.innerText = ''+ remaningTime(dateToDay) + 'day';
-         let index = tab[i];
+         let index = tableau[i];
          
-         console.log(tab[i]);
+         console.log(tableau[i]);
 
          let DivParentsProject = document.getElementById('projects');
         //  // ====================== Debut du supp ==========================
@@ -91,8 +92,15 @@
           console.log(childElement);
           DivParentsProject.removeChild(childElement);
           // console.log(tab);
-          tab.splice(index,1);
+          tableau.splice(index,1);
           // console.log(tab);
+
+          
+        })
+
+        conteneur_filter.addEventListener('click',event =>{
+
+          AddProject(tableau);
 
           
         })
