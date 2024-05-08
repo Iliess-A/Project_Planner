@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="/assets/js/cards.js"></script>
+     <!-- Font Awesome -->
+    <!-- <script src="https://kit.fontawesome.com/61be3e4cc1.js" crossorigin="anonymous"></script> -->
     <link rel="stylesheet" href="./assets/css/style.css">
     <script defer type="module" src="/assets/js/script.js" type="module"></script>
     <title>Project Mannager</title>
@@ -29,7 +30,9 @@
                 <option value="date_decroissante">date -> -</option>
                 <option value="alphabetique"> a -> z </option>
             </select>
-            <p>dark mode</p>
+            <!-- <p id="dark_mode">dark mode</p> -->
+            <button id="dark_mode" class="dark_mode" aria-label="toggle dark mode">
+            </button>
         </div>
         <div>
             <input type="button" value="Add a project" class="button_header" id="add_projects">
@@ -63,7 +66,7 @@
         <div id="proj_form" >
             <button id="quit">x</button>
             <label for="titre_proj">votre titre:</label>
-            <input type="text" id="titre_proj">
+            <input type="text" id="titre_proj" maxlength="10" placeholder="max 10 character">
 
             <label for="description_projet">description du projets:</label>
             <input type="text" id="description_projet">
