@@ -82,7 +82,6 @@
          console.log(tab[i]);
 
          let DivParentsProject = document.getElementById('projects');
-         console.log(TESTZEBI);
         //  // ====================== Debut du supp ==========================
 
 
@@ -91,7 +90,7 @@
           let childElement = document.getElementById("index"+[i]);
           console.log(childElement);
           DivParentsProject.removeChild(childElement);
-          console.log(tab);
+          // console.log(tab);
           tab.splice(index,1);
           // console.log(tab);
 
