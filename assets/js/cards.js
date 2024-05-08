@@ -29,7 +29,7 @@
 
   }
   
-   export function AddProject() {
+   export function AddProject(tableau) {
     card();
     //création de la div container
     if (tab.length<=1){
@@ -37,9 +37,9 @@
       const submit_button = document.getElementById('submit_proj');
 
       submit_button.addEventListener('click',event=>{
-        tab = getTab();
+        tab = tableau;
         // console.log(tab);
-
+        
         projects.innerHTML='';
         for (let i = 0; i < tab.length; i++) {
           let divProject = createDiv("project");
@@ -105,7 +105,7 @@
     }else{
       const submit_button = document.getElementById('submit_proj');
       submit_button.addEventListener('click', events =>{
-        AddProject();
+        AddProject(tableau);
         console.log("teeeeeeeeeeeeeeeeeeeest")
       });
 
@@ -114,8 +114,10 @@
  
   }
 
+
+// ================================================================= TASK ===============================================
 //   function createTask(){
-//     let abab = AddProject();
+//     let abab = 25;
 //     console.log(abab);
 
 //   }
