@@ -8,6 +8,15 @@ header{
         display: flex;
         justify-content: space-between;
         padding: 3%;
+        button{
+            background: none;
+            border: none;
+        }
+        img{
+            width: 15%;
+            margin-left: 85%;
+            margin-top: -2%;   
+        }
     }
     input{
         padding: 2% 3%;

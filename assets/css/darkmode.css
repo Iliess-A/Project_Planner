@@ -1,0 +1,22 @@
+.darkmode {
+  background-color: rgb(19, 18, 11);
+  color: wheat;
+}
+.darkmode header {
+  background-color: rgb(19, 18, 11);
+}
+.darkmode header input {
+  background-color: rgb(48, 47, 43);
+  color: wheat;
+}
+.darkmode header input:hover {
+  background-color: rgb(170, 147, 119);
+  color: rgb(91, 72, 49);
+}
+.darkmode #proj_form {
+  background-color: rgb(62, 46, 42);
+}
+.darkmode input {
+  background-color: rgb(105, 76, 69);
+  color: wheat;
+}
