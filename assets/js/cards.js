@@ -43,7 +43,7 @@
         projects.innerHTML='';
         for (let i = 0; i < tab.length; i++) {
           let divProject = createDiv("project");
-          let divNameContainer = createDiv("nameContainer");
+          let divNameContainer = createDiv("nameContainer"+[i]);
           let supp = createDiv("suppElement");
           let divDateContainer = createDiv("dateContainer");
           let divNbOfDays = createDiv("nbOfDaysContainer");
@@ -79,7 +79,7 @@
          Day.innerText = ''+ remaningTime(dateToDay) + 'day';
          let index = tab[i];
          
-         console.log(tab[i]);
+        //  console.log(tab[i]);
 
          let DivParentsProject = document.getElementById('projects');
         //  // ====================== Debut du supp ==========================
@@ -88,7 +88,7 @@
          imgSupp.addEventListener('click',event =>{
 
           let childElement = document.getElementById("index"+[i]);
-          console.log(childElement);
+          // console.log(childElement);
           DivParentsProject.removeChild(childElement);
           // console.log(tab);
           tab.splice(index,1);
@@ -97,7 +97,32 @@
           
         })
 
+        function createTask(){
+    
+          let takeMain = document.querySelector('.nameContainer'+[i]);
+          console.log(takeMain);
+
+          takeMain.addEventListener('click', event =>{ //on va cibler la div nameContainer qui est incrémenté de 1  
+            let selecDiv = document.getElementById('index'+[i]);
+            console.log(selecDiv);
+            if(takeMain === selecDiv[i]){
+            } else{
+              selecDiv.style.display = 'none';
+              
+              // console.log("JE SUIS LE MEILLEUR OUUUUUU");
+              // console.log('.nameContainer'+[i]);
+            }
+          });
+      
+          // let divPorjectQuery = document.querySelector('')
+          // projects.forEach(element => {
+            
+          // });
+      
+      
         }
+        createTask();
+      }
         console.log(submit_button);
         
       })
@@ -116,9 +141,4 @@
 
 
 // ================================================================= TASK ===============================================
-//   function createTask(){
-//     let abab = 25;
-//     console.log(abab);
-
-//   }
-// createTask();
+ 

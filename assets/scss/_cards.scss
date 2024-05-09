@@ -39,6 +39,7 @@ body {
                     width: 2%;
                 }
 
+
                 .statusContainer {
                     background-color: #e4766e;
                     border: solid 1.5px black;
@@ -52,6 +53,19 @@ body {
                         margin-left: 35%;
                     }
                 }
+            }
+            #index[i]{
+                content: "";
+                position: absolute;
+                /*! top: 132px; */ /* Position verticale au centre */
+                left: 39%; /* Position horizontale au centre */
+                width: 354px; /* Largeur de la zone cliquable */
+                height: 76px; /* Hauteur de la zone cliquable */
+                background-color: rgba(255, 255, 255, 0.5); /* Couleur de fond semi-transparente */
+                transform: translate(-50%, -50%); /* Déplacer le centre de la zone cliquable au centre de la div */
+                cursor: pointer; /* Curseur pointer pour indiquer que c'est cliquable */
+                border-radius: 44px;
+                margin-top: 16%;
             }
         }
     }
