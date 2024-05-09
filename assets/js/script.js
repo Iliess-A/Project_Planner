@@ -7,5 +7,5 @@ import {proj_formulaire} from "./proj_form.js";
  AddProject(getTab());
  import {darkMode} from "./dark_mode.js";
  darkMode();
-import { filtre } from './filter.js';
-filtre();
+// import { filtre } from './filter.js';
+// filtre();

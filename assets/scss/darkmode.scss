@@ -20,4 +20,12 @@ $backgrd_drk: rgb(19, 18, 11);
         background-color: rgba(105, 76, 69);
         color: wheat;
     }
+    main{
+        .cards{
+            background-color: rgb(62, 46, 42);
+            .project{
+                background-color: rgb(105, 76, 69);
+            }
+        }
+    }
 }

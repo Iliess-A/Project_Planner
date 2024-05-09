@@ -1,21 +1,28 @@
-*{
-    margin: 0;
+body{
+    width: 100%;
+    margin: 0 auto;
     padding: 0;
+    overflow-x: hidden;
 }
 header{
     background-color: antiquewhite;
     div{
+        // width: 90%;
         display: flex;
-        justify-content: space-between;
-        padding: 3%;
         button{
             background: none;
             border: none;
+            position: absolute;
+            right: 5px;
+            img{
+                width: 18vw;
+                margin: 2vw 0;
+            }
         }
-        img{
-            width: 15%;
-            margin-left: 85%;
-            margin-top: -2%;   
+        #logo{
+            display: inline-block;
+            margin: -2% 2%;
+            width: 27vw; 
         }
     }
     input{
@@ -31,6 +38,36 @@ header{
         &:hover{
             background-color: rgb(170, 147, 119);
             color: wheat;
+        }
+    }
+}
+@media screen and (min-width: 780px) {
+    header{
+        div{
+            button{
+                img{
+                    width: 12vw;
+                }
+            }
+            #logo{
+                width: 20vw; 
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    header{
+        div{
+            button{
+                img{
+                    width: 6vw; 
+                    margin: 0;
+                }
+            }
+            #logo{
+                width: 10vw;
+            }
         }
     }
 }
