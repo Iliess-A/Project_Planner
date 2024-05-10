@@ -5,15 +5,18 @@ export function darkMode(){
     img.setAttribute('src', 'assets/images/icon/moon.png');
     img.setAttribute('alt','icon moon');
     btndDarkMode.appendChild(img);
+    const logo = document.querySelector('#logo');
     const activeDarkMode = () => {
         document.body.classList.add('darkmode');
         localStorage.setItem('darkMode', 'active');
         img.setAttribute('src', 'assets/images/icon/sun.png');
+        logo.setAttribute('src','assets/images/icon/vertical-logo.png');
     }
     const desibleDarkMode = () => {
         document.body.classList.remove('darkmode');
         localStorage.setItem('darkMode', null);
         img.setAttribute('src', 'assets/images/icon/moon.png');
+        logo.setAttribute('src','assets/images/icon/vertical-logo-dark.png');
     }
     if (darkMode === "active"){
         activeDarkMode();        
