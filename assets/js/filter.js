@@ -22,8 +22,8 @@ function project_filter(){
             switch(value_filter.value){
                 case 'en_cours':
                     filterd_tab=tab.filter(objets =>objets.status === 'en_cours');
-                    console.log(filterd_tab);
-                    console.log(filtered_tab_fct());
+                    // console.log(filterd_tab);
+                    // console.log(filtered_tab_fct());
                     project_div.innerHTML='';
                     AddProject(filtered_tab_fct());
                     break;

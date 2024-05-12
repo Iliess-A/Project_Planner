@@ -22,12 +22,15 @@
     //Création de la div qui va contenir toutes les autres div
     let projects = createDiv("cards"); //création de la div project avec sa class cards
     projects.setAttribute("id", "projects"); //ajout de l'id projects à la div
+    // projects.innerHTML="";
 
     let task = createDiv("cards"); //création de la div task avec sa class cards
     task.setAttribute("id", "task"); //ajout de l'id task à la div 'task'
+    // task.innerHTML="";
   
     mainElement.appendChild(projects); //On ajoute la div projects au main
     mainElement.appendChild(task); //On ajoute la div task au main
+    // mainElement.innerHTML='';
 
   }
   
