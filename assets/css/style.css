@@ -42,6 +42,9 @@ body main .cards .project .suppElement img {
   width: 10vw;
   margin-left: 35%;
 }
+body main .cards .project #change_status {
+  display: none;
+}
 
 @media screen and (min-width: 1024px) {
   body main .cards .project {
@@ -121,8 +124,6 @@ header input:hover {
   align-items: center;
   position: absolute;
   background-color: rgba(122, 82, 76, 0.9);
-  -webkit-box-shadow: rgba(0, 0, 0, 0.9) 10px 20px 30px -10px, rgba(0, 0, 0, 0.9) -2px -2px 30px -2px;
-  -moz-box-shadow: rgba(0, 0, 0, 0.9) 10px 20px 30px -10px, rgba(0, 0, 0, 0.9) -2px -2px 30px -2px;
   box-shadow: rgba(0, 0, 0, 0.9) 10px 20px 30px -10px, rgba(0, 0, 0, 0.9) -2px -2px 30px -2px;
   border-radius: 30px;
   height: 55vh;
@@ -213,4 +214,4 @@ header input:hover {
 }
 .darkmode main .cards .project {
   background-color: rgb(105, 76, 69);
-}
+}/*# sourceMappingURL=style.css.map */

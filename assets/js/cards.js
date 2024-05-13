@@ -91,6 +91,7 @@ export function showtable(tableau){
       // console.log("changement en :"+change);
       element.status = change;
       // console.log('apres le changement '+element.status)
+      localStorage.setItem('proj_tab', JSON.stringify(tableau));
       showtable(tableau);
     })
   });
