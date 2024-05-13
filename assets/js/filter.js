@@ -2,6 +2,7 @@
 import { getTab } from "./proj_form.js";
 import { showtable } from './cards.js';
 
+let filterd_tab=[];
 let tab_origin=getTab();
 
 const main = document.querySelector('header');
@@ -69,3 +70,8 @@ export function filtre(){
         tasks_filter();
     }
 }
+
+//exporte le tableau filtrer.
+export function filtered_tab_fct(){
+return filterd_tab;
+};
