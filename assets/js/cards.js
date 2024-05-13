@@ -79,12 +79,13 @@ export function showtable(tableau){
     div_project.appendChild(supp);
 
     supp.addEventListener('click',event=>{
-      
       tableau.splice(index,1);
       showtable(tableau);
       localStorage.setItem('proj_tab', JSON.stringify(tableau));
-      
+      // return element.title; pour un prochaine episode.
+    
     })
+
     status.addEventListener('change',event=>{
       // console.log("avant le changement"+element.status);
       let change = status.value;
@@ -93,6 +94,7 @@ export function showtable(tableau){
       // console.log('apres le changement '+element.status)
       localStorage.setItem('proj_tab', JSON.stringify(tableau));
       showtable(tableau);
+      
     })
   });
 
