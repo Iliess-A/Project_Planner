@@ -31,19 +31,15 @@ body main .cards .project {
   border-style: solid;
   border-width: 2%;
 }
-body main .cards .project .statusContainer {
-  background-color: #e4766e;
-  border: solid 1.5px black;
-  height: 10px;
-  width: 10px;
-  border-radius: 50%;
-}
 body main .cards .project .suppElement img {
   width: 10vw;
   margin-left: 35%;
 }
 body main .cards .project #change_status {
-  display: none;
+  border: none;
+  background-color: transparent;
+  width: 2vw;
+  height: 2vh;
 }
 
 @media screen and (min-width: 1024px) {
