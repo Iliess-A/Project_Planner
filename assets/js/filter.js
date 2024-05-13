@@ -2,7 +2,6 @@
 import { getTab } from "./proj_form.js";
 import { showtable } from './cards.js';
 
-let filterd_tab=[];
 let tab_origin=getTab();
 
 const main = document.querySelector('header');
@@ -24,26 +23,33 @@ function project_filter(){
             switch(value_filter.value){
                 case 'en_cours':
 
-                    filterd_tab=tab_origin.filter(objets =>objets.status === 'en_cours');
-                    // console.log(filterd_tab);
-                    // console.log(filtered_tab_fct());
-                    //project_div.innerHTML='';
                     showtable(tab_origin.filter(objets =>objets.status === 'en_cours'));
                     break;
+
                 case 'fini':
-                    console.log('fini');
+
+                    showtable(tab_origin.filter(objets =>objets.status === 'fini'));
                     break;
+
                 case 'pas_commencer':
-                    console.log('pas commencer');
-                    break;
+
+                showtable(tab_origin.filter(objets =>objets.status === 'pas_commencer'));
+                break;
+
                 case 'date_croissante':
-                    console.log('date croissante');
-                    break;
+
+                showtable(tab_origin.filter(objets =>objets.status === 'date_croissante'));
+                break;
+
                 case 'date_decroissante':
-                    console.log('date decroissante');
-                    break;
+
+                showtable(tab_origin.filter(objets =>objets.status === 'date_decroissante'));
+                break;
+
                 case 'alphabetique':
-                    console.log('de a -> z');
+
+                    showtable(tab_origin.filter(objets =>objets.status === 'alphabetique'));
+                    break;
                         
             }
         }
@@ -70,8 +76,3 @@ export function filtre(){
         tasks_filter();
     }
 }
-
-//exporte le tableau filtrer.
-export function filtered_tab_fct(){
-return filterd_tab;
-};
