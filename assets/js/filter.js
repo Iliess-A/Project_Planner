@@ -7,7 +7,10 @@ let tab_origin=getTab();
 const main = document.querySelector('header');
 const conteneur_filter = main.querySelector('.filter_conteneur');
 const value_filter = conteneur_filter.querySelector('.filter');
-const project_div = document.getElementById('projects');
+const submit_proj = document.getElementById('submit_proj');
+const submit_task = document.getElementById('submit_task');
+
+
 
 function project_filter(){
     //appelle de la fonction qui vas afficher le tableau vide ou localstorage.
@@ -70,9 +73,15 @@ export function filtre(){
     if(value_filter.id === 'filtre_projet'){
         //tu execute cette fonction
         project_filter();
+        submit_proj.addEventListener('click',event=>{
+            project_filter();
+        })
 
     }else if(value_filter.id === 'filtre_task'){
         //tu execute cette fonction.
         tasks_filter();
+        submit_task.addEventListener('click',event=>{
+            project_filter();
+        })
     }
 }
