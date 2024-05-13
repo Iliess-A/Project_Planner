@@ -1,5 +1,5 @@
 //formulaire task et creation du tableau des task
-
+const task_table=JSON.parse(localStorage.getItem('task_table')) || [];
 export function task_formulaire(){
 
     const buttonn_header = document.querySelector('.button_header');
@@ -35,7 +35,7 @@ export function task_formulaire(){
     
     //creation du tableau qui vas contenir les differente task
     //remplis le tableau avec les donnee du formulaire
-    const task=[];
+    
     submit_button.addEventListener('click',event=>{
 
         const titre = document.getElementById('titre_task');
@@ -49,7 +49,8 @@ export function task_formulaire(){
             description:description.value,
             status:status.value
         }
-        task.push(item);
+        task_table.push(item);
+        localStorage.setItem('task_table', JSON.stringify(task_table));
     })
-    return task
+    return task_table
 }

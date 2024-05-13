@@ -1,9 +1,8 @@
 // cette fonction a pour but de filtrer le tableau.
 import { getTab } from "./proj_form.js";
-import { AddProject } from './cards.js';
+import { showtable } from './cards.js';
 
-let filterd_tab=[];
-let tab=getTab();
+let tab_origin=getTab();
 
 const main = document.querySelector('header');
 const conteneur_filter = main.querySelector('.filter_conteneur');
@@ -11,21 +10,24 @@ const value_filter = conteneur_filter.querySelector('.filter');
 const project_div = document.getElementById('projects');
 
 function project_filter(){
-    //code pour fltrer les projets
-    AddProject(getTab());
+    //appelle de la fonction qui vas afficher le tableau vide ou localstorage.
+    showtable(getTab());
+
+    //code pour filtrer les projets:
     conteneur_filter.addEventListener('change',event=>{
 
         if(value_filter.value ==='default'){
             console.log('not filtered');
-            AddProject(getTab());
+            showtable(getTab());
         }else{
             switch(value_filter.value){
                 case 'en_cours':
-                    filterd_tab=tab.filter(objets =>objets.status === 'en_cours');
+
+                    filterd_tab=tab_origin.filter(objets =>objets.status === 'en_cours');
                     // console.log(filterd_tab);
                     // console.log(filtered_tab_fct());
-                    project_div.innerHTML='';
-                    AddProject(filtered_tab_fct());
+                    //project_div.innerHTML='';
+                    showtable(tab_origin.filter(objets =>objets.status === 'en_cours'));
                     break;
                 case 'fini':
                     console.log('fini');
@@ -67,8 +69,3 @@ export function filtre(){
         tasks_filter();
     }
 }
-
-//exporte le tableau filtrer.
-export function filtered_tab_fct(){
-return filterd_tab;
-};

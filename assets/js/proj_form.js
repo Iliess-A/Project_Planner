@@ -1,5 +1,6 @@
 import { task_formulaire } from "./task_form.js";
 task_formulaire();
+const proj_tab= JSON.parse(localStorage.getItem('proj_tab')) || [];
 export function proj_formulaire(){
 
     const buttonn_header = document.querySelector('.button_header');
@@ -46,6 +47,7 @@ export function proj_formulaire(){
         }
 
         proj_tab.push(item);
+        localStorage.setItem('proj_tab', JSON.stringify(proj_tab));
         //je remet a zero le formulaire.
         titre.value='';
         date.value='';
@@ -54,7 +56,6 @@ export function proj_formulaire(){
         //console.log(proj_tab);
     })
 }
-const proj_tab=[];
 
 export function getTab(){
     return proj_tab;
