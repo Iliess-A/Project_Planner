@@ -39,17 +39,23 @@ function project_filter(){
 
                 case 'date_croissante':
 
-                showtable(getTab().filter(objets =>objets.status === 'date_croissante'));
+                showtable(getTab().sort((a,b) => {
+                    return new Date(a.date) - new Date (b.date)
+                } ));
                 break;
 
                 case 'date_decroissante':
 
-                showtable(getTab().filter(objets =>objets.status === 'date_decroissante'));
+                showtable(getTab().sort((a,b) => {
+                    return new Date(b.date) - new Date (a.date);
+                } ));
                 break;
 
                 case 'alphabetique':
 
-                    showtable(getTab().filter(objets =>objets.status === 'alphabetique'));
+                showtable(getTab().sort((a,b) => {
+                    return a.titre.toLowerCase().localeCompare(b.titre.toLowerCase());
+                } ));
                     break;
                         
             }
