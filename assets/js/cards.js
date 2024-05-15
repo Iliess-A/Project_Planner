@@ -2,7 +2,7 @@
 liste des projets soit display la liste des tasks on doit a partire de ces div 
 (car oui pour chaque objet du tableau on vas créé une div ) supprimer du tableau et changer le status
 ce dernier dois ce refresh des que le tableau est modifier donc supression ou filtrage */
-import { remaningTime } from "./remaningTime";
+import { remaningTime } from "./remaningTime.js";
 //positionement dans le dom
 
 const projects_div = document.getElementById('projects');
