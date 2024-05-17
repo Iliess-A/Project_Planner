@@ -8,7 +8,7 @@ import { remaningTime } from "./remaningTime.js";
 const projects_div = document.getElementById('projects');
 
 export function showtable(tableau){
-
+console.log(tableau)
   //vide l'affichage
   projects_div.innerHTML='';
   // étape une voir si le tableau recus est bon simple console.log 
@@ -80,8 +80,9 @@ export function showtable(tableau){
 
     supp.addEventListener('click',event=>{
       tableau.splice(index,1);
-      showtable(tableau);
       localStorage.setItem('proj_tab', JSON.stringify(tableau));
+      showtable(tableau);
+      
       // return element.title; pour un prochaine episode.
     
     })
